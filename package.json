@@ -22,7 +22,8 @@
     "url": "https://github.com/mixmaxhq/cloudwatch-metrics/issues"
   },
   "homepage": "https://github.com/mixmaxhq/cloudwatch-metrics#readme",
-  "dependencies": {
+  "dependencies": {},
+  "peerDependencies": {
     "aws-sdk": "^2.4.14"
   },
   "devDependencies": {
