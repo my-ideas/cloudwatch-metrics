@@ -150,6 +150,7 @@ Metric.prototype.put = function(value, metricName, additionalDimensions) {
     self._storedMetrics.push({
       MetricName: metricName,
       Dimensions: self.defaultDimensions.concat(additionalDimensions),
+      Timestamp: Date.now(),
       Unit: self.units,
       Value: value
     });
@@ -201,6 +202,21 @@ Metric.prototype._sendMetrics = function() {
     MetricData: dataPoints,
     Namespace: self.namespace
   }, self.options.sendCallback);
+};
+
+/**
+ * Shuts down metric service by clearing any outstanding timer and sending any existing metrics
+ */
+Metric.prototype.shutdown = function() {
+  clearInterval(this._interval);
+  this._sendMetrics();
+};
+
+/**
+ * Gets whether outstanding metrics exist or not
+ */
+Metric.prototype.hasMetrics = function() {
+  return !!this._storedMetrics.length;
 };
 
 module.exports = {
