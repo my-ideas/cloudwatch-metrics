@@ -36,7 +36,7 @@ describe('cloudwatch-metrics', function() {
               Value: 'Value'
             }],
             MetricName: 'metricName',
-            Timestamp: jasmine.any(Number),
+            Timestamp: jasmine.stringMatching(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{3})?Z$/),
             Unit: 'Count',
             Value: 1
           }],
@@ -68,7 +68,7 @@ describe('cloudwatch-metrics', function() {
               Value: 'Value'
             }],
             MetricName: 'metricName',
-            Timestamp: jasmine.any(Number),
+            Timestamp: jasmine.stringMatching(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{3})?Z$/),
             Unit: 'Count',
             Value: 1
           }],
@@ -105,7 +105,7 @@ describe('cloudwatch-metrics', function() {
               Value: 'Value'
             }],
             MetricName: 'metricName',
-            Timestamp: jasmine.any(Number),
+            Timestamp: jasmine.stringMatching(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{3})?Z$/),
             Unit: 'Count',
             Value: 1
           }, {
@@ -117,7 +117,7 @@ describe('cloudwatch-metrics', function() {
               Value: 'Value'
             }],
             MetricName: 'metricName',
-            Timestamp: jasmine.any(Number),
+            Timestamp: jasmine.stringMatching(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{3})?Z$/),
             Unit: 'Count',
             Value: 2
           }],
