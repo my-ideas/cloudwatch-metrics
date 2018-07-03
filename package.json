@@ -1,7 +1,7 @@
 {
-  "name": "cloudwatch-metrics",
-  "version": "1.1.0",
-  "description": "A simple wrapper for simplifying using Cloudwatch metrics",
+  "name": "@porketta/cloudwatch-metrics",
+  "version": "1.1.1",
+  "description": "A simple wrapper for simplifying using Cloudwatch metrics included in @porketta",
   "main": "index.js",
   "scripts": {
     "test": "jasmine",
@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "eslint": ">=3",
+    "aws-sdk": "^2.4.14",
     "eslint-config-mixmax": "^0.6.0",
     "jasmine": "^2.5.2",
     "pre-commit": "^1.2.2",
